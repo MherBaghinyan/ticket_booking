@@ -29,14 +29,14 @@ var binaryToDecimal = function(sequence)
     
     for(var i=0; i< binary.length; i++)
     {
-		decimal += Math.pow(2,i)*(+(binary.slice(binary.length - (i+1), binary.length -i)));   
+		decimal += Math.pow(2, i)*(+(binary.slice(binary.length - (i + 1), binary.length -i)));   
     }
     
     return decimal;
 };
 
 
-// print fibonacci sequence
+// prints fibonacci sequence
 
 var fibonacci = function(n)
 {
@@ -49,10 +49,39 @@ var fibonacci = function(n)
 
 var printFibonacci = function(given)
 {
-    for(var i=0; i<= given; i++)
+    for(var i=0; i <= given; i++)
     {
         console.log(fibonacci(i));
     }
 };
 
+// prints pascal triangle
+
+var pascalTriangle = function(n)
+{
+     var maxRows = n;
+            var r, num;
+            for (var i = 0; i <= maxRows; i++) 
+			{
+                num = 1;
+                r = i + 1;
+                var logString = "";
+                var rowString = "";
+                //pre-spacing
+                for (var j = maxRows - i; j > 0; j--) 
+				{
+                    logString += " ";
+                }
+                for (var col = 0; col <= i; col++) 
+				{
+                    if (col > 0) 
+					{
+                        num = num * (r - col) / col;
+                    }
+                    rowString += (col == 0 ? logString : "") + num;
+                }
+                console.log(rowString); 
+                
+            }
+};
 
