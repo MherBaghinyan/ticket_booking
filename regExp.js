@@ -13,3 +13,10 @@ var validateGUID = function(token)
      var validator = /^(\{|\()?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}(\}|\))?$/;   
      return validator.test(token);
 };
+
+//ip v 4 validator
+var validateIp = function(ip)
+{
+     var validator = /^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/;   
+     return validator.test(ip);
+};
