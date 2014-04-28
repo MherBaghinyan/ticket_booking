@@ -20,3 +20,19 @@ var validateIp = function(ip)
      var validator = /^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/;   
      return validator.test(ip);
 };
+
+//email validator
+var validateEmail = function(email)
+{
+     var validator = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;   
+     return validator.test(email);
+};
+
+//password validator
+var validatePassword = function(password)
+{
+     var validator = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])/;   
+     return validator.test(password);
+};
+
+
