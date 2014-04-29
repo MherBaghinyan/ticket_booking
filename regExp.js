@@ -35,4 +35,10 @@ var validatePassword = function(password)
      return validator.test(password);
 };
 
+//validate 6 symbols length number
+var validateNumber = function(number)
+{ 
+     var validator = /^([0-9]){6}/;   
+     return validator.test(number);
+};
 
