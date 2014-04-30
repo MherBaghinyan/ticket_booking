@@ -42,3 +42,15 @@ var validateNumber = function(number)
      return validator.test(number);
 };
 
+//validate date String for given range
+var validateDateString = function(date)
+{ 
+     var validator = /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.]/;  
+     var yearIndex = date.lastIndexOf('/'); 
+     var year = (yearIndex != -1 && yearIndex != date.length -1) ? date.slice(yearIndex + 1, date.length) : "";  
+     var validYear = parseInt(year, 10); 
+     var checkForNAN = Number.isNaN(validYear);
+     var isYearValid = !checkForNAN && validYear >=1600 && validYear<=9999;
+     return validator.test(date) && isYearValid;
+};
+
