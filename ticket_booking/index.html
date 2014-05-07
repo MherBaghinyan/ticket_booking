@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<!--
+	Minimaxing 3.1 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ticket booking</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	</head>
+	<body>
+
+		<h2>Welcome to ticket booking site
+		</h2>
+        <form data-bind="submit: saveDataAndContinue">
+
+     <section><p>
+   <span> Destination city:
+    <select data-bind="options: fromCity,optionsCaption: 'From...',
+                       value: selectedFromCity"></select>
+	</span>
+	   <span> Target city:
+    <select data-bind="options: targetCity,optionsCaption: 'To...',
+                       value: selectedTargetCity"></select>
+	</span>
+	<span> Ticket Type:
+    <select data-bind="options: ticketType,optionsCaption: 'Type...',
+                       value: selectedType"></select>
+	</span>
+	<span> Class:
+    <select data-bind="options: ticketClass,optionsCaption: 'Class...',
+                       value: selectedClass"></select>
+	</span>
+            </p>
+                <p>
+	 <span> Available dates:
+    <select data-bind="options: availableDate"></select>
+	</span>
+                </p>
+            </section>
+            <section>
+                <p data-bind="visible: selectedTargetCity">You are going to book a ticket for flight  <span data-bind="text: destination"></span>
+                </p>
+                <p data-bind="visible: selectedType">With the following parameters.
+                <div data-bind="visible: selectedType">Ticket Type: <span data-bind="text: selectedType"></span></div>
+                <div data-bind="visible: selectedClass">Class: <span data-bind="text: selectedClass"></span></div>
+                </p>
+            </section>
+            <button type="submit">Submit</button>
+        </form>
+
+		<script src="javascript/knockout-3.1.0.js"></script>
+		<script src="javascript/src/index.js"></script>
+	<!-- ********************************************************* -->
+	</body>
+</html>
