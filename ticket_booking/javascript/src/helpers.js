@@ -1,5 +1,3 @@
-
-
 var writeData = function () {
     var args = Array.prototype.slice.call(arguments);
 
@@ -106,7 +104,6 @@ function getData(key) {
 }
 
 
-function capitaliseFirstLetter(string)
-{
+function capitaliseFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }

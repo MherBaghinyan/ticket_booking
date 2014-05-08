@@ -5,17 +5,18 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Ticket booking</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	</head>
-	<body>
+<head>
+    <title>Ticket booking</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+</head>
+<body>
 
-		<h2>Welcome to ticket booking site
-		</h2>
-        <form data-bind="submit: saveDataAndContinue">
+<h2>Welcome to ticket booking site
+</h2>
 
-     <section><p>
+<form data-bind="submit: saveDataAndContinue">
+
+    <section><p>
    <span> Destination city:
     <select data-bind="options: fromCity,optionsCaption: 'From...',
                        value: selectedFromCity"></select>
@@ -32,29 +33,33 @@
     <select data-bind="options: ticketClass,optionsCaption: 'Class...',
                        value: selectedClass"></select>
 	</span>
-            </p>
-                <p>
+    </p>
+
+        <p>
 	 <span> Available dates:
     <select data-bind="options: availableDate"></select>
 	</span>
-                </p>
-            </section>
-            <section>
-                <p data-bind="visible: selectedTargetCity">You are going to book a ticket for flight  <span data-bind="text: destination"></span>
-                </p>
-                <p data-bind="visible: selectedType">With the following parameters.
-                <div data-bind="visible: selectedType">Ticket Type: <span data-bind="text: selectedType"></span></div>
-                <div data-bind="visible: selectedClass">Class: <span data-bind="text: selectedClass"></span></div>
-                </p>
-            </section>
-            <button class="btn" type="submit">Submit</button>
-        </form>
+        </p>
+    </section>
+    <section>
+        <p data-bind="visible: selectedTargetCity">You are going to book a ticket for flight <span
+                data-bind="text: destination"></span>
+        </p>
 
-		<script src="javascript/knockout-3.1.0.js"></script>
-		<script src="javascript/src/index.js"></script>
-        <script src="javascript/src/helpers.js"></script>
-        <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-	<!-- ********************************************************* -->
-	</body>
+        <p data-bind="visible: selectedType">With the following parameters.
+
+        <div data-bind="visible: selectedType">Ticket Type: <span data-bind="text: selectedType"></span></div>
+        <div data-bind="visible: selectedClass">Class: <span data-bind="text: selectedClass"></span></div>
+        </p>
+    </section>
+    <button class="btn" type="submit">Submit</button>
+</form>
+
+<script src="javascript/knockout-3.1.0.js"></script>
+<script src="javascript/src/index.js"></script>
+<script src="javascript/src/helpers.js"></script>
+<script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- ********************************************************* -->
+</body>
 </html>
