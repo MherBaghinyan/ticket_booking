@@ -54,34 +54,34 @@ var deleteData = function () {
     localStorage.removeItem(key);
 };
 
-var writeUserData = function (data) {
-    writeData("userData", data);
+var writeTicketData = function (data) {
+    writeData("ticketData", data);
 };
 
-var updateUserData = function (data) {
-    updateData("userData", data);
+var updateTicketData = function (data) {
+    updateData("ticketData", data);
 };
 
-var deleteUserData = function () {
-    deleteData("userData");
+var deleteTicketData = function () {
+    deleteData("ticketData");
 };
 
-var getUserData = function () {
-    if (getLocalData("userData"))
-        return getLocalData("userData");
+var getTicketData = function () {
+    if (getLocalData("ticketData"))
+        return getLocalData("ticketData");
     return null;
 };
 
-var getUserDataField = function (field) {
-    if (getLocalData("userData"))
-        return getLocalData("userData")[field];
+var getTicketDataField = function (field) {
+    if (getLocalData("ticketData"))
+        return getLocalData("ticketData")[field];
     return null;
 };
 
-var updateUserDataField = function (key, value) {
+var updateTicketDataField = function (key, value) {
     var obj = {};
     obj[key] = value;
-    updateUserData(obj);
+    updateTicketData(obj);
 };
 
 var getRequestSettings = function () {
@@ -89,7 +89,7 @@ var getRequestSettings = function () {
 };
 
 var getToken = function () {
-    var userData = getUserData();
+    var userData = getTicketData();
     if (userData != null)
         return userData.token;
     return null;
