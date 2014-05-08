@@ -1,10 +1,4 @@
 // Constructor for an object with two properties
-var Flight = function (flightNumber, model) {
-    this.flightNumber = flightNumber;
-    this.direction = model.destination();
-    this.seatClass = model.selectedClass();
-    this.ticketType = model.selectedType();
-};
 
 var viewModel = function () {
 
@@ -24,7 +18,8 @@ var viewModel = function () {
     }, self);
 
     self.saveDataAndContinue = function () {
-        writeData("flight", new Flight(1101, self));
+        !getData("flight") && writeData("flight", new Flight(initialFlightNumber, self));
+        window.location = "seat_booking.html";
     }
 };
 

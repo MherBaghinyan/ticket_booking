@@ -12,13 +12,13 @@
 </head>
 <body>
 
-<h2>Welcome to ticket booking site
+<h2>Proceed your order
 </h2>
 
 <form data-bind="submit: saveDataAndContinue">
 
     <section><p>
-        <span> Destination city:
+        <span> Seats:
         <select data-bind="options: fromCity,optionsCaption: 'From...',
                            value: selectedFromCity"></select>
         </span>
@@ -34,13 +34,13 @@
         <select data-bind="options: ticketClass,optionsCaption: 'Class...',
                            value: selectedClass"></select>
         </span>
-        </p>
+    </p>
 
-         <p>
+        <p>
          <span> Available dates:
         <select data-bind="options: availableDate"></select>
         </span>
-         </p>
+        </p>
     </section>
     <section>
         <p data-bind="visible: selectedTargetCity">You are going to book a ticket for flight
@@ -58,7 +58,7 @@
 
 <script src="javascript/knockout-3.1.0.js"></script>
 <script src="javascript/src/include.js"></script>
-<script src="javascript/src/index.js"></script>
+<script src="javascript/src/seat_booking.js"></script>
 <!-- ********************************************************* -->
 </body>
 </html>
