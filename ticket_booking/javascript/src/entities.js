@@ -9,10 +9,10 @@ var Flight = function (flightNumber, model) {
     this.ticketType = model.selectedType();
 };
 
-var Seat = function (model) {
+var Seat = function (flightNumber, status) {
     this.flightNumber = flightNumber;
-    this.number = model.destination();
-    this.status = model.selectedClass();
+    this.number;
+    this.seatStatus = status;
 };
 
 var Ticket = function (model) {

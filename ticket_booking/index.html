@@ -12,12 +12,15 @@
 </head>
 <body>
 
-<h2>Welcome to ticket booking site
-</h2>
+<div style="text-align: center">
+    <h2>Welcome to ticket booking site
+    </h2>
+</div>
 
-<form data-bind="submit: saveDataAndContinue">
 
-    <section><p>
+<form class="form-inline" role="form" data-bind="submit: saveDataAndContinue">
+    <div style="padding: 10px">
+        <section class="form-group"><p>
         <span> Destination city:
         <select data-bind="options: fromCity,optionsCaption: 'From...',
                            value: selectedFromCity"></select>
@@ -36,24 +39,25 @@
         </span>
         </p>
 
-         <p>
+            <p>
          <span> Available dates:
         <select data-bind="options: availableDate"></select>
         </span>
-         </p>
-    </section>
-    <section>
-        <p data-bind="visible: selectedTargetCity">You are going to book a ticket for flight
-            <span data-bind="text: destination"></span>
-        </p>
+            </p>
+        </section>
+        <section>
+            <p data-bind="visible: selectedTargetCity">You are going to book a ticket for flight
+                <span data-bind="text: destination"></span>
+            </p>
 
-        <p data-bind="visible: selectedType">With the following parameters.
+            <p data-bind="visible: selectedType">With the following parameters.
 
-        <div data-bind="visible: selectedType">Ticket Type: <span data-bind="text: selectedType"></span></div>
-        <div data-bind="visible: selectedClass">Class: <span data-bind="text: selectedClass"></span></div>
-        </p>
-    </section>
-    <button class="btn" type="submit">Submit</button>
+            <div data-bind="visible: selectedType">Ticket Type: <span data-bind="text: selectedType"></span></div>
+            <div data-bind="visible: selectedClass">Class: <span data-bind="text: selectedClass"></span></div>
+            </p>
+        </section>
+        <button class="btn" type="submit">Proceed</button>
+    </div>
 </form>
 
 <script src="javascript/knockout-3.1.0.js"></script>

@@ -12,48 +12,29 @@
 </head>
 <body>
 
-<h2>Proceed your order
-</h2>
+<div style="text-align: center">
+    <h2>Proceed your order
+    </h2>
+</div>
 
 <form data-bind="submit: saveDataAndContinue">
-
+    <div style="padding: 10px">
     <section><p>
         <span> Seats:
-        <select data-bind="options: fromCity,optionsCaption: 'From...',
-                           value: selectedFromCity"></select>
+       <select data-bind="options: availableSeats,
+                       optionsText: 'seatStatus',
+                       value: selectedSeat,
+                       optionsCaption: 'Choose...'"></select>
         </span>
            <span> Target city:
-        <select data-bind="options: targetCity,optionsCaption: 'To...',
-                           value: selectedTargetCity"></select>
-        </span>
-        <span> Ticket Type:
-        <select data-bind="options: ticketType,optionsCaption: 'Type...',
-                           value: selectedType"></select>
-        </span>
-        <span> Class:
-        <select data-bind="options: ticketClass,optionsCaption: 'Class...',
-                           value: selectedClass"></select>
-        </span>
-    </p>
-
-        <p>
-         <span> Available dates:
-        <select data-bind="options: availableDate"></select>
+        <select ></select>
         </span>
         </p>
+
     </section>
-    <section>
-        <p data-bind="visible: selectedTargetCity">You are going to book a ticket for flight
-            <span data-bind="text: destination"></span>
-        </p>
 
-        <p data-bind="visible: selectedType">With the following parameters.
-
-        <div data-bind="visible: selectedType">Ticket Type: <span data-bind="text: selectedType"></span></div>
-        <div data-bind="visible: selectedClass">Class: <span data-bind="text: selectedClass"></span></div>
-        </p>
-    </section>
     <button class="btn" type="submit">Submit</button>
+        </div>
 </form>
 
 <script src="javascript/knockout-3.1.0.js"></script>
