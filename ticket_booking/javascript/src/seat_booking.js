@@ -6,7 +6,6 @@
         this.flightNumber = flightNumber;
         this.number = isNaN(this.number) ? 100 : this.number ++;
         this.seatStatus = status;
-        alert(this.number);
     };
 
     var seatsArray = [];
