@@ -9,17 +9,22 @@
     <title>Ticket booking</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
-<div style="text-align: center">
-    <h2>Welcome to ticket booking site
-    </h2>
+<div class="well well-lg">
+    <div class="panel-body" style="text-align: center">
+        <h2>Welcome to ticket booking website <small>fly with us</small>
+        </h2>
+    </div>
 </div>
 
 
 <form class="form-inline" role="form" data-bind="submit: saveDataAndContinue">
-    <div style="padding: 10px">
+
+
+    <div style="padding: 100px;">
         <section class="form-group"><p>
         <span> Destination city:
         <select data-bind="options: fromCity,optionsCaption: 'From...',
@@ -45,7 +50,7 @@
         </span>
             </p>
         </section>
-        <section>
+        <section class="dynamic_div">
             <p data-bind="visible: selectedTargetCity">You are going to book a ticket for flight
                 <span data-bind="text: destination"></span>
             </p>

@@ -1,0 +1,8 @@
+.dynamic_div {
+    min-width: 100px;
+    width: 30%;
+    background: #cddcd3;
+    text-align: -webkit-left;
+    padding-left: 89px;
+    border-radius: 6px;
+}
