@@ -18,7 +18,12 @@ var viewModel = function () {
     }, self);
 
     self.saveDataAndContinue = function () {
-        !getData("flight") && writeData("flight", new Flight(initialFlightNumber, self));
+        if(!getData("flight")) {
+            writeData("flight", new Flight(initialFlightNumber, self));
+        } else {
+            updateData("flight", new Flight(initialFlightNumber, self));
+        }
+
         window.location = "seat_booking.html";
     }
 };
