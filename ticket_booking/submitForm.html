@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<form  >
+    <input type="text" name="firstName" data-bind="value: firstName"/>
+    <input type="text" name="lastName" data-bind="value: lastName"/>
+    <input type="submit" data-bind="value: saveDataAndContinue" />
+</form>
+</body>
+
+<script src="javascript/jquery-2.1.0.min.js"></script>
+<script src="javascript/knockout-3.1.0.js">
+    var viewModel = function () {
+
+        var self = this;
+        // These are the initial options
+        self.firstName = ko.observable();
+        self.lastName = ko.observable();
+
+        self.saveDataAndContinue = function () {
+            $.ajax({
+                type: 'GET',
+                url: 'http://localhost:3000/test',
+                dataType: 'json',
+                data: {firstName: self.firstName, lastName: self.lastName},
+                crossDomain: true,
+                success: function(){console.log('success')},
+                error: function(){console.log('error')}
+            });
+            window.location = "seat_booking.html";
+        }
+    };
+
+    ko.applyBindings(new viewModel()); // This makes Knockout get to work
+</script>
+</html>

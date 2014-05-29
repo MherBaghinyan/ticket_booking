@@ -35,7 +35,7 @@ app.get('/users', user.list);
 
 app.get('/test', function(req, res, next)
 {
-    res.send("Hello world");
+    res.send(req.query.firstname + " / " + req.query.lastName);
 });
 
 http.createServer(app).listen(app.get('port'), function(){
